@@ -225,7 +225,7 @@ def update_grouped_bar_graph(chose_names):
 def update_scatter_plot(price_range):
     filtered_data = data[(data['Price'] >= price_range[0]) & (data['Price'] <= price_range[1])]
     fig = px.scatter(filtered_data, x='Change', y='PE Ratio', color='Price',
-                     hover_name='Symbol', title='Change vs PE Ratio by Price')
+                     hover_name='Symbol', title='PE Ratio vs Change by Price')
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')  # make the background transparent
     return fig
 
